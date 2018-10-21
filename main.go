@@ -48,9 +48,9 @@ func main() {
 
 	r.HandleFunc("/", IndexHandler)
 
-	s := server.New(r, ":8080")
+	s := server.New(r, ":0")
 
-	Info.Println("server running on port :8080")
+	Info.Println("server running on port :0")
 
 	err := s.ListenAndServe()
 	if err != nil {
